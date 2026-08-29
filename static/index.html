@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Dashboard -->
+        <aside class="dashboard">
+            <div class="logo">
+                <h2>Budget Assistant</h2>
+            </div>
+            
+            <div class="summary-cards">
+                <div class="card-row">
+                    <div class="card budget">
+                        <h3>Monthly Salary / Budget</h3>
+                        <h2 id="monthly-budget" style="color: #60a5fa;">₹0 (Set via chat)</h2>
+                    </div>
+                </div>
+
+                <div class="card remaining">
+                    <h3>Remaining Budget</h3>
+                    <h1 id="remaining-budget">₹0</h1>
+                </div>
+                
+                <div class="card-row">
+                    <div class="card spent">
+                        <h3>Total Spent</h3>
+                        <h2 id="total-spent">₹0</h2>
+                    </div>
+                    <div class="card deleted">
+                        <h3>Deleted Money</h3>
+                        <h2 id="total-deleted">₹0</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transactions">
+                <h3>Recent Transactions</h3>
+                <div id="transactions-list" class="transactions-list">
+                    <!-- Dynamic Items -->
+                </div>
+            </div>
+            
+            <div class="deleted-transactions">
+                <h3>Deleted Transactions</h3>
+                <div id="deleted-list" class="deleted-list">
+                    <!-- Dynamic Items -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <h3>Assistant Chat</h3>
+                <p>Add expenses, check category summary, or delete entries.</p>
+            </header>
+            
+            <div class="chat-box" id="chat-box">
+                <div class="message assistant">
+                    <div class="msg-bubble">
+                        Hello! I'm your Personal Budget Assistant. How can I help you manage your expenses today?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="E.g., I spent 500 on pizza..." autocomplete="off" required>
+                    <button type="submit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
