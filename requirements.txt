@@ -4,3 +4,8 @@ ipykernel
 fastapi
 uvicorn
 python-multipart
+
+Flask
+langchain
+langchain-openai
+openai
